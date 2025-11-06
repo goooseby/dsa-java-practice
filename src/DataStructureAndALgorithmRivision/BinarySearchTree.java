@@ -2,7 +2,7 @@ package DataStructureAndALgorithmRivision;
 
 public class BinarySearchTree {
 
-    // 崩溃了
+
     // 基本属性和构造方法
     private BinaryNode root;
 
@@ -51,18 +51,46 @@ public class BinarySearchTree {
 
     // 查找最大，最小元素
 
-//    public double findMin(){
-//        return findMin(root).element;
-//    }
-//
-//    /**
-//     *
-//     * @param t 开始查找的位置
-//     * @return 返回最大 的
-//     */
-//    public BinaryNode findMin(BinaryNode t){
-//        return  findMin(t.left);
-//    }
+    public double findMin(){
+        return findMin(root).element;
+    }
+
+    /**
+     * 实现方法：不断前往左子树，直到末尾
+     * @param t 开始查找的位置
+     * @return 返回最大 的
+     */
+    private BinaryNode findMin(BinaryNode t){
+
+        if (t == null){
+            return null;
+        }
+        else if (t.left == null){
+            return t;
+        }
+        return  findMin(t.left);
+    }
+
+    // 寻找最大同理
+    public double findMax(){
+        return findMax(root).element;
+    }
+
+    private BinaryNode findMax(BinaryNode t){
+        if (t == null){
+            return null;
+        }
+        else if (t.right == null){
+            return t;
+        }
+        return  findMax(t.right);
+    }
+
+    // 之后是插入和删除：两个最重要的部分
+    // 插入较为简单：只需要不断往下寻找到叶节点即可，如果已经存在，则直接跳过插入即可
+    public void insert(double x){
+
+    }
 
 
     /**
