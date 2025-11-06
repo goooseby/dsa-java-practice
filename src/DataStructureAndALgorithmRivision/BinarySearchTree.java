@@ -2,6 +2,7 @@ package DataStructureAndALgorithmRivision;
 
 public class BinarySearchTree {
 
+    // 崩溃了
     // 基本属性和构造方法
     private BinaryNode root;
 
