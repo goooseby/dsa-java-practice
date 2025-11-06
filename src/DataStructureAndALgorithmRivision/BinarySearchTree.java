@@ -50,18 +50,18 @@ public class BinarySearchTree {
 
     // 查找最大，最小元素
 
-    public double findMin(){
-        return findMin(root).element;
-    }
-
-    /**
-     *
-     * @param t 开始查找的位置
-     * @return 返回最大 的
-     */
-    public BinaryNode findMin(BinaryNode t){
-
-    }
+//    public double findMin(){
+//        return findMin(root).element;
+//    }
+//
+//    /**
+//     *
+//     * @param t 开始查找的位置
+//     * @return 返回最大 的
+//     */
+//    public BinaryNode findMin(BinaryNode t){
+//        return  findMin(t.left);
+//    }
 
 
     /**
