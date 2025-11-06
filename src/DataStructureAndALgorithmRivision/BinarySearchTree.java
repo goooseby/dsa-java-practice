@@ -89,7 +89,20 @@ public class BinarySearchTree {
     // 之后是插入和删除：两个最重要的部分
     // 插入较为简单：只需要不断往下寻找到叶节点即可，如果已经存在，则直接跳过插入即可
     public void insert(double x){
+        insert(x, root);
+    }
+    private BinaryNode insert(double x, BinaryNode t){
+        if (t == null){
+            return new BinaryNode(x);
+        }
+        else if (t.element > x){
+            t.left = insert(x, t.left);
+        }
+        else if (t.element < x){
+            t.right = insert(x, t.right);
+        }
 
+        return t;
     }
 
 
@@ -106,7 +119,8 @@ public class BinarySearchTree {
         double element;
 
         public BinaryNode(double element){
-            this.element = element;
+            this(element, null, null);
+
         }
 
         public BinaryNode(double element,BinaryNode left,BinaryNode right){
