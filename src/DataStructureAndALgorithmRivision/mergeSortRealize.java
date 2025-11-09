@@ -65,4 +65,10 @@ public class mergeSortRealize {
 
     }
 
+    public static void main(String[] args) {
+        double[] a = {5, 4, 3, 2, 1};
+        mergeSort(a);
+        for (double v : a) System.out.print(v + " ");
+    }
+
 }
